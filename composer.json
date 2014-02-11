@@ -1,0 +1,36 @@
+{
+    "name": "geo-io/wkt-parser",
+    "description": "Geo I/O WKT (well-known text) package.",
+    "keywords": [
+        "geo",
+        "io",
+        "geometry",
+        "wkt",
+        "parser"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jan Sorgalla",
+            "email": "jsorgalla@googlemail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "geo-io/interface": "0.1.*@dev",
+        "jms/parser-lib": "~1.1@dev"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GeoIO\\WKT\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
