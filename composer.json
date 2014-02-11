@@ -1,5 +1,5 @@
 {
-    "name": "geo-io/wkt-parser",
+    "name": "geo-io/wkt",
     "description": "Geo I/O WKT (well-known text) package.",
     "keywords": [
         "geo",
