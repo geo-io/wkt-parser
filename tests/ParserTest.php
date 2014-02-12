@@ -3,7 +3,6 @@
 namespace GeoIO\WKT\Parser;
 
 use GeoIO\Dimension;
-use GeoIO\WKT\TestCase;
 use Mockery;
 
 class ParserTest extends \PHPUnit_Framework_TestCase
