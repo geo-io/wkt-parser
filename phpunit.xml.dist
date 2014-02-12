@@ -12,7 +12,7 @@
          bootstrap="tests/bootstrap.php"
 >
     <testsuites>
-        <testsuite name="Geo I/O Factory Test Suite">
+        <testsuite name="Geo I/O WKT Parser Test Suite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
@@ -20,9 +20,6 @@
     <filter>
         <whitelist>
             <directory>./src/</directory>
-            <exclude>
-                <file>./src/bootstrap.php</file>
-            </exclude>
         </whitelist>
     </filter>
 
