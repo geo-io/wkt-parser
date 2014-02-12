@@ -1,9 +1,9 @@
-Geo I/O WKT
-===========
+Geo I/O WKT Parser
+==================
 
-[![Build Status](https://travis-ci.org/geo-io/wkt.png?branch=master)](https://travis-ci.org/geo-io/wkt)
+[![Build Status](https://travis-ci.org/geo-io/wkt-parser.png?branch=master)](https://travis-ci.org/geo-io/wkt-parser)
 
-Geo I/O WKT (well-known text) package.
+Well-known text (WKT) Parser.
 
 Installation
 ------------
@@ -13,7 +13,7 @@ Install [through composer](http://getcomposer.org).
 ```json
 {
     "require": {
-        "geo-io/wkt": "0.1.*@dev"
+        "geo-io/wkt-parser": "0.1.*@dev"
     }
 }
 ```
@@ -21,4 +21,4 @@ Install [through composer](http://getcomposer.org).
 License
 -------
 
-Geo I/O WKT is released under the [MIT License](LICENSE).
+Geo I/O WKT Parser is released under the [MIT License](LICENSE).

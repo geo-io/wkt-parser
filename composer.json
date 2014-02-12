@@ -1,6 +1,6 @@
 {
-    "name": "geo-io/wkt",
-    "description": "Geo I/O WKT (well-known text) package.",
+    "name": "geo-io/wkt-parser",
+    "description": "Well-known text (WKT) Parser.",
     "keywords": [
         "geo",
         "io",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GeoIO\\WKT\\": "src/"
+            "GeoIO\\WKT\\Parser\\": "src/"
         }
     },
     "extra": {
