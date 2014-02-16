@@ -3,12 +3,38 @@ Geo I/O WKT Parser
 
 [![Build Status](https://travis-ci.org/geo-io/wkt-parser.png?branch=master)](https://travis-ci.org/geo-io/wkt-parser)
 
-Well-known text (WKT) Parser.
+A parser which transforms
+[Well-known text (WKT)](http://en.wikipedia.org/wiki/Well-known_text)
+representations into geometric objects.
+
+```php
+class MyFactory implements GeoIO\Factory
+{
+    public function createPoint($dimension, array $coordinates, $srid = null)
+    {
+        return MyPoint($coordinates['x'], $coordinates['y']);
+    }
+
+    public function createLineString($dimension, array $points, $srid = null)
+    {
+        return MyLineString($points);
+    }
+
+    // ...
+}
+
+$factory = MyFactory();
+$parser = new GeoIO\WKT\Parser($factory);
+
+$myPoint = $parse->parse('LINESTRING(1 2, 2 2, 1 1)');
+```
 
 Installation
 ------------
 
-Install [through composer](http://getcomposer.org).
+Install [through composer](http://getcomposer.org). Check the
+[packagist page](https://packagist.org/packages/geo-io/wkt-parser) for all
+available versions.
 
 ```json
 {
