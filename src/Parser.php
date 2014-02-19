@@ -161,7 +161,7 @@ class Parser extends AbstractParser
         return $point;
     }
 
-    private function lineStringText(&$dimension = null)
+    private function lineStringText(&$dimension = null, $isLinearRing = false)
     {
         $this->match('(');
         $points = array();
@@ -176,6 +176,14 @@ class Parser extends AbstractParser
             $this->match(',');
         }
         $this->match(')');
+
+        if ($isLinearRing) {
+            return $this->factory->createLinearRing(
+                $dimension ?: Dimension::DIMENSION_2D,
+                $points,
+                $this->srid
+            );
+        }
 
         return $this->factory->createLineString(
             $dimension ?: Dimension::DIMENSION_2D,
@@ -208,7 +216,7 @@ class Parser extends AbstractParser
         $lineStrings = array();
 
         while (true) {
-            $lineStrings[] = $this->lineStringText($dimension);
+            $lineStrings[] = $this->lineStringText($dimension, true);
 
             if (!$this->lexer->isNext(',')) {
                 break;

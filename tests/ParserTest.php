@@ -362,7 +362,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
         ;
 
         $factory
-            ->shouldReceive('createLineString')
+            ->shouldReceive('createLinearRing')
             ->once()
             ->with(Dimension::DIMENSION_2D, Mockery::any(), null)
         ;
@@ -414,7 +414,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
         ;
 
         $factory
-            ->shouldReceive('createLineString')
+            ->shouldReceive('createLinearRing')
             ->times(2)
             ->with(Dimension::DIMENSION_3DZ, Mockery::any(), null)
         ;
@@ -636,7 +636,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
         ;
 
         $factory
-            ->shouldReceive('createLineString')
+            ->shouldReceive('createLinearRing')
             ->times(3)
             ->with(Dimension::DIMENSION_3DZ, Mockery::any(), null)
         ;
@@ -887,7 +887,13 @@ EOT;
 
             $factory
                 ->shouldReceive('createLineString')
-                ->times(19 * 2)
+                ->times(7 * 2)
+                ->with(Dimension::DIMENSION_3DZ, Mockery::any(), Mockery::any())
+            ;
+
+            $factory
+                ->shouldReceive('createLinearRing')
+                ->times(12 * 2)
                 ->with(Dimension::DIMENSION_3DZ, Mockery::any(), Mockery::any())
             ;
 
