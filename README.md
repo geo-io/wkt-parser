@@ -1,7 +1,7 @@
 Geo I/O WKT Parser
 ==================
 
-[![Build Status](https://travis-ci.org/geo-io/wkt-parser.png?branch=master)](https://travis-ci.org/geo-io/wkt-parser)
+[![Build Status](https://travis-ci.org/geo-io/wkt-parser.svg?branch=master)](https://travis-ci.org/geo-io/wkt-parser)
 [![Coverage Status](https://img.shields.io/coveralls/geo-io/wkt-parser.svg)](https://coveralls.io/r/geo-io/wkt-parser)
 
 A parser which transforms
