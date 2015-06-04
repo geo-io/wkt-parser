@@ -25,7 +25,7 @@ class MyFactory implements GeoIO\Factory
 }
 
 $factory = MyFactory();
-$parser = new GeoIO\WKT\Parser($factory);
+$parser = new GeoIO\WKT\Parser\Parser($factory);
 
 $myLineString = $parse->parse('LINESTRING(1 2, 2 2, 1 1)');
 ```
