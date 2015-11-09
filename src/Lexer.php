@@ -15,7 +15,7 @@ class Lexer extends AbstractLexer
     {
         return '/
             # Numbers
-            ([-+]?[0-9]*\.?[0-9]*)
+            ([-+]?[0-9]*\.?[0-9]*e[-+]?[0-9]+|[-+]?[0-9]*\.?[0-9]*)
 
             |(SRID|POINT|LINESTRING|POLYGON|MULTIPOINT|MULTILINESTRING|MULTIPOLYGON|GEOMETRYCOLLECTION|ZM|M|Z|EMPTY)
 

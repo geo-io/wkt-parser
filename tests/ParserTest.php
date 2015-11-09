@@ -977,6 +977,20 @@ EOT;
         $parser->parse('POINT(-1. -.5 -5.5)');
     }
 
+    public function testCoordsScientificNumericValues()
+    {
+        $factory = Mockery::mock('GeoIO\\Factory');
+
+        $factory
+            ->shouldReceive('createPoint')
+            ->once()
+            ->with(Dimension::DIMENSION_3DZ, $this->coords(0.00001, -0.0000000002, 3.45), null)
+        ;
+
+        $parser = new Parser($factory);
+        $parser->parse('POINT(1.e-005 -.2e-009 3.45e-0)');
+    }
+
     public function testParseIsCaseInsensitive()
     {
         $factory = Mockery::mock('GeoIO\\Factory');
