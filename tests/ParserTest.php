@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 
 class ParserTest extends TestCase
 {
-    protected function coords($x, $y, $z = null, $m = null)
+    private function coords($x, $y, $z = null, $m = null): Coordinates
     {
         return new Coordinates(
             x: $x,
