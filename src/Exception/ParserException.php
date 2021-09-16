@@ -6,7 +6,7 @@ namespace GeoIO\WKT\Parser\Exception;
 
 use RuntimeException;
 
-class ParserException extends RuntimeException implements Exception
+final class ParserException extends RuntimeException implements Exception
 {
     /**
      * @param array{0: int|float|string, 1: int, 2: string}|null $actualToken
