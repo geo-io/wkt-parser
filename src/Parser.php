@@ -296,10 +296,10 @@ final class Parser
     ): mixed {
         $lexer->match('(');
 
-        $lineStrings = [];
+        $linearRings = [];
 
         while (true) {
-            $lineStrings[] = $this->lineStringText(
+            $linearRings[] = $this->lineStringText(
                 $lexer,
                 $srid,
                 $dimension,
@@ -318,7 +318,7 @@ final class Parser
         return $this->factory->createPolygon(
             $dimension ?: Dimension::DIMENSION_2D,
             $srid,
-            $lineStrings,
+            $linearRings,
         );
     }
 
