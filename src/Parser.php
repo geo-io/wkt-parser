@@ -61,7 +61,7 @@ final class Parser
     private function geometry(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $types = [
             'POINT',
@@ -114,8 +114,8 @@ final class Parser
 
     private function dimension(
         Lexer $lexer,
-        ?string $dimension,
-    ): ?string {
+        ?Dimension $dimension,
+    ): ?Dimension {
         if (
             (Dimension::DIMENSION_4D === $dimension || null === $dimension) &&
             $lexer->isNext('ZM')
@@ -149,7 +149,7 @@ final class Parser
     private function coordinates(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $coordinates = [
             'x' => (float) $lexer->matchAny(['FLOAT', 'INTEGER']),
@@ -192,7 +192,7 @@ final class Parser
     private function point(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
@@ -225,7 +225,7 @@ final class Parser
     private function lineStringText(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
         bool $isLinearRing = false,
     ): mixed {
         $lexer->match('(');
@@ -265,7 +265,7 @@ final class Parser
     private function lineString(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
@@ -292,7 +292,7 @@ final class Parser
     private function polygonText(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $lexer->match('(');
 
@@ -325,7 +325,7 @@ final class Parser
     private function polygon(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
@@ -352,7 +352,7 @@ final class Parser
     private function multiPoint(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
@@ -410,7 +410,7 @@ final class Parser
     private function multiLineString(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
@@ -457,7 +457,7 @@ final class Parser
     private function multiPolygon(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension,
+        ?Dimension &$dimension,
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
@@ -504,7 +504,7 @@ final class Parser
     private function geometryCollection(
         Lexer $lexer,
         ?int $srid,
-        ?string &$dimension
+        ?Dimension &$dimension
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
