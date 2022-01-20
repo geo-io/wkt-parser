@@ -26,7 +26,7 @@ final class ParserException extends RuntimeException implements Exception
             $actualDesc = sprintf(
                 '"%s" at position %d (0-based)',
                 $actualToken[0],
-                $actualToken[1]
+                $actualToken[1],
             );
         }
 
@@ -35,7 +35,7 @@ final class ParserException extends RuntimeException implements Exception
                 'Expected %s, but got %s.',
                 $expectedDesc,
                 $actualDesc,
-            )
+            ),
         );
     }
 }

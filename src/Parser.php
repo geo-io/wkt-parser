@@ -504,7 +504,7 @@ final class Parser
     private function geometryCollection(
         Lexer $lexer,
         ?int $srid,
-        ?Dimension &$dimension
+        ?Dimension &$dimension,
     ): mixed {
         $dimension = $this->dimension(
             $lexer,
