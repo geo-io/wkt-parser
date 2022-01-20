@@ -2,7 +2,7 @@ Geo I/O WKT Parser
 ==================
 
 [![Build Status](https://github.com/geo-io/wkt-parser/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/geo-io/wkt-parser/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/geo-io/wkt-parser/badge.svg?branch=main&service=github)](https://coveralls.io/github/geo-io/wkt-parser?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/geo-io/wkt-parser/badge.svg?branch=main)](https://coveralls.io/github/geo-io/wkt-parser?branch=main)
 
 A parser which transforms
 [Well-known text (WKT)](http://en.wikipedia.org/wiki/Well-known_text)
